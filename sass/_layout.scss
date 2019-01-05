@@ -5,6 +5,7 @@
 body {
 	font-family: $brand-font;
 	color: $brand-color;
+	background: #F2F2EF;
 	
 }
 
@@ -14,11 +15,13 @@ body {
 	width: 188px;
 	height: 100vh;
 	position: fixed;
+	z-index: 9;
 	.logo {
 		padding: 20px 18px;
 	}
 	.sidebar_menu_list {
 		padding: 0;
+		margin: 0;
 		li {
 			list-style: none;
 			display: flex;
@@ -27,8 +30,16 @@ body {
 			height: 32px;
 			padding-left: 18px;
 			&:hover {
-				border-left: 4px #F58220 solid;
-				padding-left: 18px;
+				position: relative;
+			}
+			&:hover::after {
+				content: " ";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 4px;
+				height: 32px;
+				background: #F58220;
 			}
 			.general{
 				width: 16px;
@@ -38,13 +49,68 @@ body {
 				font-size: 14px;
 				color: $brand-color;
 				text-decoration: none;
+				padding: 8px 46px 8px 0px;
+			}
+			:before {
+				padding-right: 20px;
 			}
 			&:hover {
 				background: #707070;
+				transition: .3s;
 				a {
 					color: #fff
 				}
 			}
+		}
+	}
+}
+
+/* topbar */
+.topbar {
+	background: #fff;
+	height: 62px;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	.topbar_menu_list {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0;
+		.profile a {
+			color: $active-color;
+			font-size: 13px;
+		}
+		.profile i {
+			color: $brand-color;
+			font-size: 16px;
+		}
+		li {
+		list-style: none;
+		float: left;
+		padding: 0px 20px;
+		border-left: 1px #e3e3e3 solid;
+		height: 62px;
+		align-items: center;
+		display: flex;
+		a {
+			color: $brand-color;
+			text-decoration: none;
+			display: flex;
+			align-items: center;
+			&:hover {
+				color: #F58220;
+				transition: .3s;
+			}
+		}
+		.icon-wallet {
+			padding: 0 20px 0 0;
+		}
+		.icon-arrow-down {
+			padding: 0 0 0 20px;
+		}
+		.icon-profile {
+			padding: 0 20px 0 0;
+		}
 		}
 	}
 }
