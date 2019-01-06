@@ -1,0 +1,50 @@
+/* topbar */
+.topbar {
+	background: $secondary-background;
+	height: 62px;
+	position: fixed;
+	left: 0;
+	width: 100%;
+	border-bottom: 1px $border-color solid;
+	.topbar_menu_list {
+		display: flex;
+		justify-content: flex-end;
+		margin: 0;
+		.profile a {
+			color: $active-color;
+			font-size: 13px;
+		}
+		.profile i {
+			color: $brand-color;
+			font-size: 16px;
+		}
+		li {
+		list-style: none;
+		float: left;
+		padding: 0px 20px;
+		border-left: 1px $border-color solid;
+		height: 62px;
+		align-items: center;
+		display: flex;
+			a {
+				color: $brand-color;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				&:hover {
+					color: #F58220;
+					transition: .3s;
+				}
+			}
+			.icon-wallet {
+				padding: 0 20px 0 0;
+			}
+			.icon-arrow-down {
+				padding: 0 0 0 20px;
+			}
+			.icon-profile {
+				padding: 0 20px 0 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,95 @@
+/* main */
+.main {
+	padding: 62px 0 0 188px;
+	.main_content {
+		background: $secondary-background;
+		margin: 20px;
+		.numbers {
+			padding: 0!important;
+		}
+		.main_content_head {
+			padding: 10px;
+			border-bottom: 1px $border-color solid;
+		}
+		.main_content_body {
+			padding: 30px 0;
+			.date {
+				display: flex;
+				justify-content: center;
+				form {
+					display: flex;
+				}
+				.inputs {
+					display: flex;
+					border: 1px $border-color solid;
+					.input-first {
+						border-right: 1px $border-color solid;
+						margin: 6px 0;
+					}
+					.input-second {
+						display: flex;
+						align-items: center;
+						i {
+							padding-right: 20px;
+						}
+					}
+					input {
+						padding: 5px;
+						border: none;
+						margin-left: 15px;
+					}
+				}
+				.refresh {
+					background: #F58220;
+					border-radius: 3px;
+					margin-left: 10px;
+					width: 47px;
+					height: 47px;
+					i {
+						color: #fff;
+					}
+					&:hover {
+						background: #f7670e;
+						cursor: pointer;
+						transition: .3s;
+					}
+				}
+			}
+		}
+		.chart {
+			.main_stats {
+				display: flex;
+				justify-content: center;
+			}
+			.main_stats_row {
+				width: 310px;
+				border-bottom: 1px $border-color solid;
+				margin: 0 40px;
+				padding: 20px 0 10px 0;
+				display: flex;
+			    align-items: center;
+			    justify-content: space-between;
+				.stats_title {
+				}
+				.stats_value {
+					color: #333333;
+				}
+			}
+			.main_chart_content {
+				padding-top: 60px;
+				.main_chart_header {
+					display: flex;
+					justify-content: center;
+					padding-bottom: 30px;
+					h2 {
+						margin-right: 40px;
+					}
+				}
+				.main_chart_body {
+					display: flex;
+					justify-content: center;
+				}
+			}
+		}
+	}
+}

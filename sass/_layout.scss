@@ -1,3 +1,9 @@
+@import "components/sidebar";
+@import "components/topbar";
+@import "sections/links";
+@import "sections/main";
+@import "sections/links";
+
 * {
     box-sizing: border-box;
 }
@@ -15,178 +21,34 @@ h1 {
 	font-weight: 500;
 }
 
-/* sidebar */
-.sidebar {
-	background: #191919;
-	width: 188px;
-	height: 100vh;
-	position: fixed;
-	z-index: 9;
-	.logo {
-		padding: 20px 18px;
-	}
-	.sidebar_menu_list {
-		padding: 0;
-		margin: 0;
-		li {
-			list-style: none;
-			display: flex;
-			align-items: center;
-			width: 188px;
-			height: 32px;
-			padding-left: 18px;
-			&:hover {
-				position: relative;
-			}
-			&:hover::after {
-				content: " ";
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 4px;
-				height: 32px;
-				background: #F58220;
-			}
-			.general{
-				width: 16px;
-				height: 15px;
-			}
-			a {
-				font-size: 14px;
-				color: $brand-color;
-				text-decoration: none;
-				padding: 8px 46px 8px 0px;
-			}
-			:before {
-				padding-right: 20px;
-			}
-			&:hover {
-				background: #707070;
-				transition: .3s;
-				a {
-					color: #fff
-				}
-			}
-		}
+h2 {
+	font-size: $paragraph-font-size;
+	font-weight: 500;
+}
+
+.btn {
+	background: #F58220;
+	border-radius: 5px;
+	color: #fff;
+	padding: 10px 20px;
+	cursor: pointer;
+	font-size: 18px;
+	&:hover {
+		background: #f7670e;
+		transition: .3s;
 	}
 }
 
-/* topbar */
-.topbar {
-	background: $secondary-background;
-	height: 62px;
-	position: fixed;
-	left: 0;
+table {
 	width: 100%;
-	.topbar_menu_list {
-		display: flex;
-		justify-content: flex-end;
-		margin: 0;
-		.profile a {
-			color: $active-color;
-			font-size: 13px;
-		}
-		.profile i {
-			color: $brand-color;
-			font-size: 16px;
-		}
-		li {
-		list-style: none;
-		float: left;
-		padding: 0px 20px;
-		border-left: 1px $border-color solid;
-		height: 62px;
-		align-items: center;
-		display: flex;
+	tr {
+		td{
+			padding: 20px;
+			border-top: 1px $border-color solid;
 			a {
-				color: $brand-color;
+				color: $active-color;
 				text-decoration: none;
-				display: flex;
-				align-items: center;
-				&:hover {
-					color: #F58220;
-					transition: .3s;
-				}
 			}
-			.icon-wallet {
-				padding: 0 20px 0 0;
-			}
-			.icon-arrow-down {
-				padding: 0 0 0 20px;
-			}
-			.icon-profile {
-				padding: 0 20px 0 0;
-			}
-		}
-	}
-}
-
-/* main */
-.main {
-	padding: 62px 0 0 188px;
-	.main_content {
-		background: $secondary-background;
-		margin: 20px;
-		.numbers {
-			padding: 0!important;
-		}
-		.main_content_head {
-			padding: 10px;
-			border-bottom: 1px $border-color solid;
-		}
-		.main_content_body {
-			padding: 30px 0;
-			.date {
-				display: flex;
-				justify-content: center;
-				.inputs {
-					display: flex;
-					border: 1px $border-color solid;
-					.input-first {
-						border-right: 1px $border-color solid;
-						margin: 6px 0;
-					}
-					.input-second {
-						display: flex;
-						align-items: center;
-						i {
-							padding-right: 20px;
-						}
-					}
-					input {
-						padding: 5px;
-						border: none;
-						margin-left: 15px;
-					}
-				}
-				.refresh {
-					background: #F58220;
-					border-radius: 3px;
-					margin-left: 10px;
-					width: 47px;
-					height: 47px;
-					i {
-						color: #fff;
-					}
-				}
-			}
-		}
-		.chart {
-			display: flex;
-			justify-content: center;
-		}
-	}
-}
-
-/* links */
-.links {
-	padding: 0 0 0 188px;
-	.links_content {
-		background: $secondary-background;
-		margin: 20px;
-		border-bottom: 1px $border-color solid;
-		.links_content_head {
-			padding: 10px;
 		}
 	}
 }
