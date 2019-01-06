@@ -5,8 +5,14 @@
 body {
 	font-family: $brand-font;
 	color: $brand-color;
-	background: #F2F2EF;
+	background: $primary-background;
 	
+}
+
+h1 {
+	text-transform: uppercase;
+	font-size: $paragraph-font-size;
+	font-weight: 500;
 }
 
 /* sidebar */
@@ -67,7 +73,7 @@ body {
 
 /* topbar */
 .topbar {
-	background: #fff;
+	background: $secondary-background;
 	height: 62px;
 	position: fixed;
 	left: 0;
@@ -88,29 +94,99 @@ body {
 		list-style: none;
 		float: left;
 		padding: 0px 20px;
-		border-left: 1px #e3e3e3 solid;
+		border-left: 1px $border-color solid;
 		height: 62px;
 		align-items: center;
 		display: flex;
-		a {
-			color: $brand-color;
-			text-decoration: none;
-			display: flex;
-			align-items: center;
-			&:hover {
-				color: #F58220;
-				transition: .3s;
+			a {
+				color: $brand-color;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				&:hover {
+					color: #F58220;
+					transition: .3s;
+				}
+			}
+			.icon-wallet {
+				padding: 0 20px 0 0;
+			}
+			.icon-arrow-down {
+				padding: 0 0 0 20px;
+			}
+			.icon-profile {
+				padding: 0 20px 0 0;
 			}
 		}
-		.icon-wallet {
-			padding: 0 20px 0 0;
+	}
+}
+
+/* main */
+.main {
+	padding: 62px 0 0 188px;
+	.main_content {
+		background: $secondary-background;
+		margin: 20px;
+		.numbers {
+			padding: 0!important;
 		}
-		.icon-arrow-down {
-			padding: 0 0 0 20px;
+		.main_content_head {
+			padding: 10px;
+			border-bottom: 1px $border-color solid;
 		}
-		.icon-profile {
-			padding: 0 20px 0 0;
+		.main_content_body {
+			padding: 30px 0;
+			.date {
+				display: flex;
+				justify-content: center;
+				.inputs {
+					display: flex;
+					border: 1px $border-color solid;
+					.input-first {
+						border-right: 1px $border-color solid;
+						margin: 6px 0;
+					}
+					.input-second {
+						display: flex;
+						align-items: center;
+						i {
+							padding-right: 20px;
+						}
+					}
+					input {
+						padding: 5px;
+						border: none;
+						margin-left: 15px;
+					}
+				}
+				.refresh {
+					background: #F58220;
+					border-radius: 3px;
+					margin-left: 10px;
+					width: 47px;
+					height: 47px;
+					i {
+						color: #fff;
+					}
+				}
+			}
 		}
+		.chart {
+			display: flex;
+			justify-content: center;
+		}
+	}
+}
+
+/* links */
+.links {
+	padding: 0 0 0 188px;
+	.links_content {
+		background: $secondary-background;
+		margin: 20px;
+		border-bottom: 1px $border-color solid;
+		.links_content_head {
+			padding: 10px;
 		}
 	}
 }
