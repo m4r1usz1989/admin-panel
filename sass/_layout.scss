@@ -41,13 +41,44 @@ h2 {
 
 table {
 	width: 100%;
+	border-spacing: 0;
+	border-collapse: collapse;
 	tr {
+		border-top: 1px $border-color solid;
+		position: relative;
+		&:last-child {
+			border-bottom: 1px $border-color solid;
+		}
+		&:hover {
+			background: rgba(177, 191, 191, 0.18);
+			i {
+				display: block;
+				transition: .3s;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+		}
 		td{
 			padding: 20px;
-			border-top: 1px $border-color solid;
+			position: relative;
 			a {
 				color: $active-color;
 				text-decoration: none;
+			}
+			i {
+				display: none;
+			}
+			.icon-trash {
+				position: absolute;
+				top: 22px;
+				right: 20px;
+			}
+			.icon-links {
+				position: absolute;
+				top: 22px;
+				right: 60px;
+				color: #F58220;
 			}
 		}
 	}
