@@ -1,1 +1,1 @@
-# admin-panel
+# https://mariusz-domanski.github.io/admin-panel/
