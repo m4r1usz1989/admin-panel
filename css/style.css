@@ -233,11 +233,7 @@ template { display: none; }
 
 .sidebar .sidebar_head .logo { padding: 20px 18px; }
 
-.sidebar .sidebar_head .hamburger_menu_icon { width: 17px; height: 30px; margin-right: 20px; }
-
-.sidebar .sidebar_head .hamburger_menu_icon:hover { cursor: pointer; }
-
-.sidebar .sidebar_head .hamburger_menu_icon span { width: 17px; height: 2px; background-color: #999; margin: 6px 0; display: block; }
+.sidebar .sidebar_head .hamburger_menu_icon { display: none; }
 
 .sidebar .sidebar_menu_list { padding: 0; margin: 0; }
 
@@ -279,7 +275,13 @@ template { display: none; }
 
 .sidebar .sidebar_topbar ul li a i { padding: 0 10px; }
 
-@media (max-width: 768px) { .sidebar .sidebar_topbar { display: block; } }
+@media (max-width: 768px) { .sidebar { margin-left: -145px; transition: .3s; }
+  .sidebar .sidebar_head .hamburger_menu_icon { display: block; width: 17px; height: 30px; margin-right: 13px; }
+  .sidebar .sidebar_head .hamburger_menu_icon:hover { cursor: pointer; }
+  .sidebar .sidebar_head .hamburger_menu_icon span { width: 17px; height: 2px; background-color: #999; margin: 6px 0; display: block; }
+  .sidebar .sidebar_menu, .sidebar .sidebar_profile, .sidebar .sidebar_topbar { display: none; }
+  .show { margin-left: 0px; transition: .3s; }
+  .show .sidebar_menu, .show .sidebar_profile, .show .sidebar_topbar { display: block; } }
 
 /* topbar */
 .topbar { background: #FFF; height: 62px; position: fixed; left: 0; width: 100%; border-bottom: 1px #e3e3e3 solid; }
@@ -315,9 +317,10 @@ template { display: none; }
 
 .links .links_content .links_content_body .links_content_table { padding: 30px 0; width: 100%; }
 
-@media (max-width: 768px) { .links_content_table table tr { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; }
-  .links_content_table table tr td { padding: 10px; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
-  .links_content_table table tr td i { display: block; position: relative; top: 0; right: 0; padding: 0px 5px; } }
+@media (max-width: 768px) { .links { padding: 0 0 0 40px; }
+  .links .links_content_table table tr { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; }
+  .links .links_content_table table tr td { padding: 10px; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
+  .links .links_content_table table tr td i { display: block; position: relative; top: 0; right: 0; padding: 0px 5px; } }
 
 /* main */
 .main { padding: 62px 0 0 188px; }
@@ -371,7 +374,7 @@ template { display: none; }
   .main .main_content .chart .main_stats .main_stats_column { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; -ms-flex-align: center; align-items: center; }
   .main .main_content .chart .main_chart_content .main_chart_body img { max-width: 100%; } }
 
-@media (max-width: 768px) { .main { padding: 0px 0 0 188px; } }
+@media (max-width: 768px) { .main { padding: 0px 0 0 40px; } }
 
 /* links */
 .links { padding: 0 0 0 188px; }
@@ -384,9 +387,10 @@ template { display: none; }
 
 .links .links_content .links_content_body .links_content_table { padding: 30px 0; width: 100%; }
 
-@media (max-width: 768px) { .links_content_table table tr { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; }
-  .links_content_table table tr td { padding: 10px; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
-  .links_content_table table tr td i { display: block; position: relative; top: 0; right: 0; padding: 0px 5px; } }
+@media (max-width: 768px) { .links { padding: 0 0 0 40px; }
+  .links .links_content_table table tr { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-direction: column; flex-direction: column; }
+  .links .links_content_table table tr td { padding: 10px; display: -ms-flexbox; display: flex; -ms-flex-pack: justify; justify-content: space-between; }
+  .links .links_content_table table tr td i { display: block; position: relative; top: 0; right: 0; padding: 0px 5px; } }
 
 * { box-sizing: border-box; }
 
